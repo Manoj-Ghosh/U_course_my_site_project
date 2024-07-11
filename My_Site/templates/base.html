@@ -8,14 +8,12 @@
 
     <title>{% block title %}{% endblock %}</title>
 
-    <link rel ="stylesheet" href = "{ static "app.css"}">
+    <link rel ="stylesheet" href="{ static "app.css"}"/>
 
-    {% block css_file %}{% endblock %}
+    {% block css_files %}{% endblock %}
 
   </head>
   <body>
-    {% block content %}
-
-    {% endblock %}
+    {% block content %}{% endblock %}
   </body>
 </html>
