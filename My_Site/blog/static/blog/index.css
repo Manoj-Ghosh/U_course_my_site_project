@@ -9,7 +9,7 @@
   margin: 3rem auto;
 }
 
-#welcome img {
+#welcome header img {
   width: 10rem;
   height: 10rem;
   object-fit: cover;
@@ -35,6 +35,13 @@
   align-items: center;
   object-fit: contain;
   
+}
+
+#welcome img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
 }
 
 #welcome p {
