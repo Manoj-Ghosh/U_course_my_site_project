@@ -1,4 +1,5 @@
 {% extends base.html %}
+{% load static %}
 
 {% block title %}
     All My Posts
@@ -15,11 +16,18 @@
     <h2> My Collected Posts </h2>
 
 
-            <ul>
+    <ul>
 
-                {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+        {% include "blog/includes/post.html" %}
+
+
     
-            </ul>
+    </ul>
       
 </section>
 {% endblock %}
