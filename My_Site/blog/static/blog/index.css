@@ -9,7 +9,7 @@
   margin: 3rem auto;
 }
 
-#welcome header img {
+#welcome img {
   width: 10rem;
   height: 10rem;
   object-fit: cover;
@@ -101,27 +101,3 @@
   color: #353535;
 }
 
-#main-navigation h1 {
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#main-navigation nav {
-  width: 10rem;
-  height: 30rem;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
