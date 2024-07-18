@@ -31,11 +31,16 @@
 
     <section id = "latest-posts">
 
-        <h2> My Latest Thoughts </h2>
+        <h2>My Latest Thoughts</h2> <!--My Latest Thoughts-->
 
         <ul>
+            {% for list_post in list_posts %}
 
-            {% include "blog/includes/post.html" %}
+                {% include "blog/includes/post.html" %}
+
+            {% endfor %}
+
+            
 
         </ul>
 
