@@ -8,7 +8,7 @@ all_posts = [
         "slug":"hike-in-the-mountain",
         "image": "mountains.jpg",
         "author": "Manoj",
-        "date": date(2024, 7, 17),
+        "date": date(2021, 7, 17),
         "title":"Mountain Hiking",
         "excerpt": "There's is nothing like Mountain Hiking views you get when hiking in the mountains!I wasn't even prepared for what happend whilst I was enjoying the view!",
         "content": """
@@ -42,7 +42,7 @@ all_posts = [
         "slug":"Nature",
         "image": "woods.jpg",
         "author": "Manoj",
-        "date": date(2023, 8, 17),
+        "date": date(2022, 7, 7),
         "title":"Nature at its best",
         "excerpt": "There's is nothing like Nature at its best views you get when hiking in the mountains!I wasn't even prepared for what happend whilst I was enjoying the view!",
         "content": """
@@ -74,7 +74,7 @@ all_posts = [
         "slug":"Programming",
         "image": "coding.jpg",
         "author": "Manoj",
-        "date": date(2022, 7, 7),
+        "date": date(2023, 8, 17) ,
         "title":"Programming is Great",
         "excerpt": "There's is nothing like Programming is Great views you get when hiking in the mountains!I wasn't even prepared for what happend whilst I was enjoying the view!",
         "content": """
@@ -112,12 +112,13 @@ def get_date(post):
 # Create your views here.
 
 def starting_page(request):
-    #sorted_posts = sorted(all_posts, key=get_date)
+    sorted_posts = sorted(all_posts, key=get_date)
     latest_posts = all_posts[-3:]
-    return render(request, "blog/index.html", {"list_posts": all_posts})
+    return render(request, "blog/index.html", {"list_posts": latest_posts})
 
 def posts(request):
-    return render(request, "blog/all-posts.html")
+    return render(request, "blog/all-posts.html", {"all_posts": all_posts})
+
 
 def post_detail(request, slug):
     return render(request, "blog/post-detail.html")

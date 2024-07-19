@@ -3,12 +3,12 @@
 
 <li>
     <article class = "post">
-        <a href = "{% url "post-detail-page" list_post.slug %}">
+        <a href = "{% url "post-detail-page" post1.slug %}"> <!-- list_post.slug -->
 
-            <img src = "{% static "blog/images/"|add:list_post.image %}" alt = "Mountain Hiking" />
+            <img src = "{% static "blog/images/"|add:post1.image %}" alt = "{{post1.title}}" />
             <div class = "post__content">
-                <h3> {{ list_post.title }} </h3>
-                <p>{{ list_post.excerpt }}</p>
+                <h3> {{ post1.title }} </h3>
+                <p>{{ post1.excerpt }}</p>
             </div>
 
         </a>
