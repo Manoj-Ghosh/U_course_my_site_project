@@ -7,12 +7,12 @@ all_posts = [
     {
         "slug":"hike-in-the-mountain",
         "image": "mountains.jpg",
-        "author": "Manoj",
+        "author": "Piku",
         "date": date(2021, 7, 17),
         "title":"Mountain Hiking",
         "excerpt": "There's is nothing like Mountain Hiking views you get when hiking in the mountains!I wasn't even prepared for what happend whilst I was enjoying the view!",
         "content": """
-            As of June 2020, the Bengali Wikipedia is the only online free 
+            -- >As of June 2020, Manojjjj the Bengali Wikipedia is the only online free 
             encyclopedia written in the Bengali language. It is also one of 
             the largest Bengali content related sites on the internet. 
             The mobile version of the Bengali Wikipedia was launched in 2010
@@ -20,20 +20,7 @@ all_posts = [
             encyclopedia written in the Bengali language. It is also one of 
             the largest Bengali content related sites on the internet. 
             The mobile version of the Bengali Wikipedia was launched in 2010
-             
-              As of June 2020, the Bengali Wikipedia is the only online free 
-            encyclopedia written in the Bengali language. It is also one of 
-            the largest Bengali content related sites on the internet. 
-            The mobile version of the Bengali Wikipedia was launched in 2010
-             As of June 2020, the Bengali Wikipedia is the only online free 
-            encyclopedia written in the Bengali language. It is also one of 
-            the largest Bengali content related sites on the internet. 
-            The mobile version of the Bengali Wikipedia was launched in 2010
-             
-              As of June 2020, the Bengali Wikipedia is the only online free 
-            encyclopedia written in the Bengali language. It is also one of 
-            the largest Bengali content related sites on the internet. 
-            The mobile version of the Bengali Wikipedia was launched in 2010 """
+             """
     },
         
     
@@ -41,7 +28,7 @@ all_posts = [
     {
         "slug":"Nature",
         "image": "woods.jpg",
-        "author": "Manoj",
+        "author": "Saroj",
         "date": date(2022, 7, 7),
         "title":"Nature at its best",
         "excerpt": "There's is nothing like Nature at its best views you get when hiking in the mountains!I wasn't even prepared for what happend whilst I was enjoying the view!",
@@ -121,7 +108,8 @@ def posts(request):
 
 
 def post_detail(request, slug):
-    return render(request, "blog/post-detail.html")
+    identified_post = next(post11 for post11 in all_posts if post11['slug'] == slug)
+    return render(request, "blog/post-detail.html", {"post11" : identified_post})
     
 
 
