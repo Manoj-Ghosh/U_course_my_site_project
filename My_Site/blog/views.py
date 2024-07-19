@@ -12,13 +12,17 @@ all_posts = [
         "title":"Mountain Hiking",
         "excerpt": "There's is nothing like Mountain Hiking views you get when hiking in the mountains!I wasn't even prepared for what happend whilst I was enjoying the view!",
         "content": """
-            -- >As of June 2020, Manojjjj the Bengali Wikipedia is the only online free 
+            ------ >As of June 2020, Manojjjj the Bengali Wikipedia is the only online free 
             encyclopedia written in the Bengali language. It is also one of 
-            the largest Bengali content related sites on the internet. 
-            The mobile version of the Bengali Wikipedia was launched in 2010
+            the largest Bengali content related sites on the internet.
+
+
+             ----- > The mobile version of the Bengali Wikipedia was launched in 2010
              As of June 2020, the Bengali Wikipedia is the only online free 
-            encyclopedia written in the Bengali language. It is also one of 
-            the largest Bengali content related sites on the internet. 
+            encyclopedia written in the Bengali language. It is also one of
+
+
+             ------> the largest Bengali content related sites on the internet. 
             The mobile version of the Bengali Wikipedia was launched in 2010
              """
     },
@@ -33,7 +37,18 @@ all_posts = [
         "title":"Nature at its best",
         "excerpt": "There's is nothing like Nature at its best views you get when hiking in the mountains!I wasn't even prepared for what happend whilst I was enjoying the view!",
         "content": """
-            As of June 2020, the Bengali Wikipedia is the only online free 
+            --->>  As of June 2020, the Bengali Wikipedia is the only online free 
+            encyclopedia written in the Bengali language. It is also one of 
+            the largest Bengali content related sites on the internet. 
+
+
+            --->> The mobile version of the Bengali Wikipedia was launched in 2010
+             As of June 2020, the Bengali Wikipedia is the only online free 
+            encyclopedia written in the Bengali language. It is also one of 
+            the largest Bengali content related sites on the internet. 
+            The mobile version of the Bengali Wikipedia was launched in 2010
+             
+            --->> As of June 2020, the Bengali Wikipedia is the only online free 
             encyclopedia written in the Bengali language. It is also one of 
             the largest Bengali content related sites on the internet. 
             The mobile version of the Bengali Wikipedia was launched in 2010
@@ -41,20 +56,7 @@ all_posts = [
             encyclopedia written in the Bengali language. It is also one of 
             the largest Bengali content related sites on the internet. 
             The mobile version of the Bengali Wikipedia was launched in 2010
-             
-              As of June 2020, the Bengali Wikipedia is the only online free 
-            encyclopedia written in the Bengali language. It is also one of 
-            the largest Bengali content related sites on the internet. 
-            The mobile version of the Bengali Wikipedia was launched in 2010
-             As of June 2020, the Bengali Wikipedia is the only online free 
-            encyclopedia written in the Bengali language. It is also one of 
-            the largest Bengali content related sites on the internet. 
-            The mobile version of the Bengali Wikipedia was launched in 2010
-             
-              As of June 2020, the Bengali Wikipedia is the only online free 
-            encyclopedia written in the Bengali language. It is also one of 
-            the largest Bengali content related sites on the internet. 
-            The mobile version of the Bengali Wikipedia was launched in 2010 """
+             """
     },
 
     {
@@ -65,7 +67,18 @@ all_posts = [
         "title":"Programming is Great",
         "excerpt": "There's is nothing like Programming is Great views you get when hiking in the mountains!I wasn't even prepared for what happend whilst I was enjoying the view!",
         "content": """
-            As of June 2020, the Bengali Wikipedia is the only online free 
+          ===>> As of June 2020, the Bengali Wikipedia is the only online free 
+            encyclopedia written in the Bengali language. It is also one of 
+            the largest Bengali content related sites on the internet. 
+
+
+          ===>>  The mobile version of the Bengali Wikipedia was launched in 2010
+             As of June 2020, the Bengali Wikipedia is the only online free 
+            encyclopedia written in the Bengali language. It is also one of 
+            the largest Bengali content related sites on the internet. 
+            The mobile version of the Bengali Wikipedia was launched in 2010
+             
+          ===>>  As of June 2020, the Bengali Wikipedia is the only online free 
             encyclopedia written in the Bengali language. It is also one of 
             the largest Bengali content related sites on the internet. 
             The mobile version of the Bengali Wikipedia was launched in 2010
@@ -73,20 +86,7 @@ all_posts = [
             encyclopedia written in the Bengali language. It is also one of 
             the largest Bengali content related sites on the internet. 
             The mobile version of the Bengali Wikipedia was launched in 2010
-             
-              As of June 2020, the Bengali Wikipedia is the only online free 
-            encyclopedia written in the Bengali language. It is also one of 
-            the largest Bengali content related sites on the internet. 
-            The mobile version of the Bengali Wikipedia was launched in 2010
-             As of June 2020, the Bengali Wikipedia is the only online free 
-            encyclopedia written in the Bengali language. It is also one of 
-            the largest Bengali content related sites on the internet. 
-            The mobile version of the Bengali Wikipedia was launched in 2010
-             
-              As of June 2020, the Bengali Wikipedia is the only online free 
-            encyclopedia written in the Bengali language. It is also one of 
-            the largest Bengali content related sites on the internet. 
-            The mobile version of the Bengali Wikipedia was launched in 2010 """
+           """
     }
 
 
