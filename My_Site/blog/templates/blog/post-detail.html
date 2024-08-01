@@ -21,7 +21,7 @@
         <h2> {{post11.title}} </h2>
 
         <article>
-            <img src = "{% static "blog/images/"|add:post11.image %}" alt = "{{post11.title}}" />
+            <img src = "{% static "blog/images/"|add:post11.image_name %}" alt = "{{post11.title}}" />
             <address> By {{post11.author}} </address>
             <div>
                 Last updated on <time> {{post11.date | date:"d M Y"}} </time>
@@ -33,7 +33,7 @@
 
     <main>
 
-        {{post11.content | linebreaks}}
+        {{post11.Content | linebreaks}}
 
         
     </main>
