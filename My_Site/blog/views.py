@@ -22,7 +22,9 @@ def starting_page(request):
     return render(request, "blog/index.html", {"list_posts": latest_posts})
 
 def posts(request):
+    all_posts = Post.objects.all().order_by("-date")
     return render(request, "blog/all-posts.html", {"all_posts": all_posts})
+
 
 
 def post_detail(request, slug):
