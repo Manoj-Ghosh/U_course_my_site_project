@@ -1,11 +1,12 @@
-{% load static %}
+{% comment %} {% load static %} {% endcomment %}
 
 
 <li>
     <article class = "post">
         <a href = "{% url "post-detail-page" post1.slug %}"> <!-- list_post.slug -->
 
-            <img src = "{% static "blog/images/"|add:post1.image_name %}" alt = "{{post1.title}}" />
+            {% comment %} <img src = "{% static "blog/images/"|add:post1.image_name %}" alt = "{{post1.title}}" /> {% endcomment %}
+            <img src = "{{ post1.image.url }}" alt = "{{post1.title}}" />
             <div class = "post__content">
                 <h3> {{ post1.title }} </h3>
                 <p>{{ post1.excerpt }}</p>

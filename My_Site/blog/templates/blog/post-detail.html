@@ -28,7 +28,8 @@
         </div>
 
         <article>
-            <img src = "{% static "blog/images/"|add:post11.image_name %}" alt = "{{post11.title}}" />
+            {% comment %} <img src = "{% static "blog/images/"|add:post11.image_name %}" alt = "{{post11.title}}" /> {% endcomment %}
+            <img src = "{{ post11.image.url }}" alt = "{{post11.title}}" />
             <address> By <a href = "mailto: {{post11.author.email_address}}"> {{post11.author}}</a> </address>
             <div>
                 Last updated on <time> {{post11.date | date:"d M Y"}} </time>
