@@ -32,16 +32,24 @@ class StartingPageView(ListView):
     
 
 
-
 # def starting_page(request):
 #     latest_posts = Post.objects.all().order_by("-date")[:3]
 #     # sorted_posts = sorted(all_posts, key=get_date)
 #     # latest_posts = all_posts[-3:]
 #     return render(request, "blog/index.html", {"list_posts": latest_posts})
 
-def posts(request):
-    all_posts = Post.objects.all().order_by("-date")
-    return render(request, "blog/all-posts.html", {"all_posts": all_posts})
+
+class AllPostView(ListView):
+    template_name = "blog/all-posts.html"
+    model = Post
+    ordering = ["-date"]
+    context_object_name = "all_posts"
+
+    
+
+# def posts(request):
+#     all_posts = Post.objects.all().order_by("-date")
+#     return render(request, "blog/all-posts.html", {"all_posts": all_posts})
 
 
 
