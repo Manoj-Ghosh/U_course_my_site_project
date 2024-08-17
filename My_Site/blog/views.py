@@ -2,7 +2,7 @@ from datetime import date
 from typing import Any 
 from django.db.models.query import QuerySet
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from .models import Post
 
@@ -45,22 +45,33 @@ class AllPostView(ListView):
     ordering = ["-date"]
     context_object_name = "all_posts"
 
-    
+
 
 # def posts(request):
 #     all_posts = Post.objects.all().order_by("-date")
 #     return render(request, "blog/all-posts.html", {"all_posts": all_posts})
 
 
+class SingePostView(DetailView):
+    template_name = "blog/post-detail.html"
+    model = Post
+    context_object_name = "post11"
 
-def post_detail(request, slug):
-    #identified_post = next(post11 for post11 in all_posts if post11['slug'] == slug)
-    #identified_post = Post.objects.get(slug=slug)
-    identified_post = get_object_or_404(Post, slug = slug)
-    return render(request, "blog/post-detail.html", {
-        "post11" : identified_post,
-        "post_tags": identified_post.tags.all()
-        })
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context["post_tags"] = self.object.tags.all()
+        return context
+
+# def post_detail(request, slug):
+#     #identified_post = next(post11 for post11 in all_posts if post11['slug'] == slug)
+#     #identified_post = Post.objects.get(slug=slug)
+#     identified_post = get_object_or_404(Post, slug = slug)
+#     return render(request, "blog/post-detail.html", {
+#         "post11" : identified_post,
+#         "post_tags": identified_post.tags.all()
+#         })
     
 
 
