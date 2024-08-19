@@ -2,7 +2,10 @@ from datetime import date
 from typing import Any 
 from django.db.models.query import QuerySet
 from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from django.views.generic import ListView, DetailView
+from django.views import View
 
 from .models import Post
 from .forms import CommentForm
@@ -53,18 +56,52 @@ class AllPostView(ListView):
 #     return render(request, "blog/all-posts.html", {"all_posts": all_posts})
 
 
-class SingePostView(DetailView):
+class SingePostView(View):
     template_name = "blog/post-detail.html"
     model = Post
     context_object_name = "post11"
 
+    def get(self, request, slug):
+        postt= Post.objects.get(slug = slug)
+        context = {
+            "post11": postt,
+            "post_tags": postt.tags.all(),
+            "comment": CommentForm()
+        }
+        return render(request, "blog/post-detail.html", context)
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
 
-        context["post_tags"] = self.object.tags.all()
-        context["comment"] = CommentForm()
-        return context
+    def post(self, request, slug):
+        comment_form = CommentForm(request.POST)
+        postt= Post.objects.get(slug = slug)
+
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.post= postt
+            comment.save()
+
+            return HttpResponseRedirect(reverse("post-detail-page", args=[slug]))
+        
+
+        
+
+        context = {
+            "post11": postt,
+            "post_tags": postt.tags.all(),
+            "comment": CommentForm
+        }
+
+        return render(request, "blog/post-detail.html", context)
+
+
+
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+
+    #     context["post_tags"] = self.object.tags.all()
+    #     context["comment"] = CommentForm()
+    #     return context
 
 # def post_detail(request, slug):
 #     #identified_post = next(post11 for post11 in all_posts if post11['slug'] == slug)
