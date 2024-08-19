@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 
 from .models import Post
+from .forms import CommentForm
 
 
 
@@ -62,6 +63,7 @@ class SingePostView(DetailView):
         context = super().get_context_data(**kwargs)
 
         context["post_tags"] = self.object.tags.all()
+        context["comment"] = CommentForm()
         return context
 
 # def post_detail(request, slug):

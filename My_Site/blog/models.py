@@ -33,7 +33,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    use_name = models.CharField(max_length=120)
-    user_email = models.EmailField()
+    user_name = models.CharField(max_length=120) #Your Name
+    user_email = models.EmailField()            #Your Email
     text = models.TextField(max_length=400)
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
