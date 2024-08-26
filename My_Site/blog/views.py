@@ -57,16 +57,21 @@ class AllPostView(ListView):
 
 
 class SingePostView(View):
-    template_name = "blog/post-detail.html"
-    model = Post
-    context_object_name = "post11"
+    # template_name = "blog/post-detail.html"
+    # model = Post
+    # context_object_name = "post11"
+
+    
+
+
+
 
     def get(self, request, slug):
         postt= Post.objects.get(slug = slug)
         context = {
             "post11": postt,
             "post_tags": postt.tags.all(),
-            "comment": CommentForm()
+            "comment_form": CommentForm()
         }
         return render(request, "blog/post-detail.html", context)
 
