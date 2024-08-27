@@ -9,10 +9,13 @@ class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
 
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ("user_name", "post")
 
-from .models import Post, Author, Tag
+
+from .models import Post, Author, Tag, Comment
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Author)
 admin.site.register(Tag)
-
+admin.site.register(Comment, CommentAdmin)
