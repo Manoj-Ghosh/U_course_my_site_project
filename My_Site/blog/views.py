@@ -68,7 +68,7 @@ class SingePostView(View):
             "post11": postt,
             "post_tags": postt.tags.all(),
             "comment_form": CommentForm(),
-            "comments":postt.comments.all()
+            "comments":postt.comments.all().order_by("-id")
         }
         return render(request, "blog/post-detail.html", context)
 
@@ -91,7 +91,7 @@ class SingePostView(View):
             "post11": postt,
             "post_tags": postt.tags.all(),
             "comment": CommentForm,
-            "comments":postt.comments.all()
+            "comments":postt.comments.all().order_by("-id")
         }
 
         return render(request, "blog/post-detail.html", context)
