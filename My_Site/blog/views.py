@@ -61,17 +61,14 @@ class SingePostView(View):
     # model = Post
     # context_object_name = "post11"
 
-    
-
-
-
 
     def get(self, request, slug):
         postt= Post.objects.get(slug = slug)
         context = {
             "post11": postt,
             "post_tags": postt.tags.all(),
-            "comment_form": CommentForm()
+            "comment_form": CommentForm(),
+            "comments":postt.comments.all()
         }
         return render(request, "blog/post-detail.html", context)
 
@@ -93,7 +90,8 @@ class SingePostView(View):
         context = {
             "post11": postt,
             "post_tags": postt.tags.all(),
-            "comment": CommentForm
+            "comment": CommentForm,
+            "comments":postt.comments.all()
         }
 
         return render(request, "blog/post-detail.html", context)
