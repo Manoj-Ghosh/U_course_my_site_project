@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+    My Blog 
+{%endblock%}
+
+{% block css_files%}
+
+    <link rel = "stylesheet" href = "{% static "blog/post.css" %}"/>
+
+    <link rel = "stylesheet" href = "{% static "blog/index.css" %}"/>
+
+{% endblock %}
+
+{% block content %}
+
+
+    <section id = "Welcome"> 
+        <header>
+            <img src = "{% static "blog/images/max.png" %}" alt = "Manoj - The author of This Blog" />
+            <h2> MANOJ'S BLOG </H2>
+        </header>
+
+            <P> Hi, I am Manoj and I love to blog about tech and the world!</p>
+        
+
+    </section>
+
+
+    <section id = "latest-posts">
+
+        <h2>My Latest Thoughts</h2> <!--My Latest Thoughts-->
+
+        <ul>
+            {% for post1 in list_posts %}
+
+                {% include "blog/includes/post.html" %}
+
+            {% endfor %}
+
+            
+
+        </ul>
+
+
+
+
+    </section>
+
+    <section id = "about">
+
+        <h2> What I do </h2>
+        <p> 
+            I love programming, I love to help others and I enjoy exploring new technologies in general!
+
+        </p>
+        <p>
+            My goal is to keep om growing as a developer - and if I could help you do the same, I'd be very happy!
+
+        </p>
+
+    </section>
+
+
+   
+
+{% endblock %}
